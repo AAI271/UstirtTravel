@@ -9,39 +9,60 @@
     <link rel="stylesheet" href="style.css"></head>
 <body>
 <header>
-    <ul>
-        <li>
-            <a href="#welcome">Ustirt</a>
-        </li>
-        <li>
-            <a href="#about">Info</a>
-        </li>
-        <li>
-            <a href="#team">Team</a>
-        </li>
-        <li>
-            <a href="#registration">Send</a>
-        </li>
-    </ul>
+    <div class="burger" id="burger">
+        <img src="assets/burger.svg" alt="">
+    </div>
+    <div class="nav" id="nav">
+        <ul>
+            <li>
+                <a href="#welcome">Ustirt</a>
+            </li>
+            <li>
+                <a href="#about">Info</a>
+            </li>
+            <li>
+                <a href="#team">Team</a>
+            </li>
+            <li>
+                <a href="#registration">Send</a>
+            </li>
+        </ul>
+    </div>
 </header>
 <section id="welcome" class="welcome">
-    <div class=""></div>
+    <div class="welcome__content">
+        <h1>
+            Вело шеру 2023
+        </h1>
+        <span>by UstirtTravel</span>
+        <p>
+            Жаңаөзен қаласының 55 жылдығына орай, қаламызда вело шеру өтеді. Вело шеруге қатысушыларға жас шектеу жоқ
+        </p>
+    </div>
+    <div class="welcome__logo-content">
+        <img class="welcome__logo" src="assets/logo.jpg" alt="">
+        <div class="welcome__btn">
+            <a href="#registration">
+            <button class="button -regular center">Тіркелу</button>
+            </a>
+        </div>
+    </div>
 </section>
 <section id="about" class="about">
-    <div class="about__title">
-        <h2>
-            Жаңаөзен қаласына 55 жыл
-        </h2>
-    </div>
+<!--    <div class="about__title">-->
+<!--        <h2>-->
+<!--            Жаңаөзен қаласына 55 жыл-->
+<!--        </h2>-->
+<!--    </div>-->
     <div class="about__images">
         <img src="assets/aboutImg1.jpg" alt="">
         <img src="assets/aboutImg2.jpg" alt="">
         <img src="assets/aboutImg31.jpg" alt="">
     </div>
 </section>
-<section id="registration" class="registration">
+<section class="registration">
     <div class="container">
-        <div class="registration__container">
+        <div class="registration__container" id="registration" >
             <form id="send-form">
                 <div class="group">
                     <input type="text" name="fullName" value="" required>

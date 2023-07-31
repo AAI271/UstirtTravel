@@ -33,3 +33,12 @@ function toggleScrolledClass() {
 
 // Слушаем событие прокрутки и вызываем функцию
 window.addEventListener('scroll', toggleScrolledClass);
+
+
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+
+
+burger.addEventListener('click',()=>{
+    nav.classList.toggle('open')
+})
