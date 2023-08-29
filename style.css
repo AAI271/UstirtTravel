@@ -56,21 +56,34 @@ header ul li a{
 }
 .burger{
     display: none;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 .welcome{
     background-size: cover;
-    background: url("assets/aboutBg1.jpg") no-repeat center center;
+    background: url("assets/aboutBg1.png") no-repeat center center fixed;
     background-size: cover;
     min-height: 755px;
     text-align: left;
     display: flex;
     justify-content: space-between;
     padding: 100px 0 0 50px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.8);
+}
+.welcome__container{
+    width: 50%;
+
+}
+.welcome__logo{
+    display: flex;
+    align-items: start;
 }
 .welcome__logo img{
-    width: 400px;
+    width: 200px;
     height: auto;
+}
+.welcome__janaozen{
+    display: flex;
+    align-items: end;
 }
 .welcome__janaozen img{
     width:150px;
@@ -80,18 +93,13 @@ header ul li a{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 0 auto;
-    width: 50%;
 }
 .welcome__content{
-    background-color: rgba(32, 33, 41, 0.47);
     padding: 50px;
-    border: 1px solid #ffb173;
-    transition: background-color 0.5s;
     text-align: left;
     flex-direction: column;
     height: 400px;
-    max-width: 400px;
+    max-width: 590px;
 }
 .welcome__content p{
     font-size: 20px;
@@ -99,31 +107,74 @@ header ul li a{
     line-height: 30px;
 }
 
-.welcome__content:hover{
-    background-color: rgba(32, 33, 41, 0.74);
-}
 .welcome__content h1{
-    font-size: 80px;
+    font-size: 63px;
 }
 
 .welcome__content span{
     font-size: 33px;
 }
+
+.welcome__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.welcome-timer{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.welcome__container ul{
+    display: flex;
+    justify-content: space-around;
+}
+.welcome-timer li {
+    display: inline-block;
+    list-style-type: none;
+    text-transform: uppercase;
+    min-width: 60px;
+}
+
+.welcome-timer li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+.welcome-timer .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+.welcome-timer .emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+    .welcome-timer h1 {
+        font-size: calc(1.5rem * .75);
+    }
+
+    .welcome-timer li {
+        font-size: calc(1.125rem * .75);
+    }
+
+    .welcome-timer li span {
+        font-size: calc(3.375rem * .75);
+    }
+}
+
+
 .about{
     padding: 50px 0;
     min-height: 0;
-}
-.about__title{
-    background-color: rgba(32, 33, 41, 0.83);
-    border-radius: 5px;
-    border: 1px solid #ffb173;
-    width: 50%;
-    margin:0 auto 50px auto;
-    letter-spacing: 1px;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: url("assets/aboutBg1.png") no-repeat  fixed;
+    background-size: cover;
 }
 .about__info{
     display: flex;
@@ -137,7 +188,6 @@ header ul li a{
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: #202129;
     color: white;
     padding: 15px;
@@ -146,6 +196,9 @@ header ul li a{
     border: 1px solid white;
     box-shadow: 0 4px 24px -1px #0003;
     transition: transform 0.3s;
+}
+.about__card h3{
+    height: 50px;
 }
 .about__card ul{
     margin-left: 15px;
@@ -157,8 +210,9 @@ header ul li a{
 
 .registration{
     padding: 50px 0;
-    background:url("assets/registrationBg2.jpg") no-repeat fixed;
+    background: url("assets/aboutBg1.png") no-repeat center center fixed;
     background-size: cover;
+    text-align: left;
 }
 
 .registration .container{
@@ -166,16 +220,15 @@ header ul li a{
     align-items: center;
     justify-content: space-around;
 }
-.registration__card{
-    background-color: rgba(32, 33, 41, 0.47);
-    border: 1px solid #ffb173;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 35%;
+.registration__img{
     text-align: left;
-    color: white;
-    transition: background-color 0.3s;
+    overflow: hidden;
+    padding: 0;
+}
+.registration__img img{
+    max-width: 500px;
+    border-radius: 10px;
+    width: 100%;
 }
 .registration__card:hover{
     background-color: rgba(32, 33, 41, 0.74);
@@ -190,24 +243,29 @@ header ul li a{
 .registration__container{
     width: 500px;
 }
+.registration button{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+}
 .group{
     position:relative;
     margin-bottom:45px;
 }
 input 				{
     font-size:18px;
-    padding:10px 10px 10px 5px;
+    padding:10px 0;
     display:block;
     width:300px;
     color: white;
     border:none;
-    border-bottom:2px solid black;
+    border-bottom:3px solid black;
     background-color: transparent;
 }
 input:focus 		{ outline:none; }
 
 label 				 {
-    color:black;
+    color: #ffffff;
     font-size:18px;
     font-weight:normal;
     position:absolute;
@@ -243,11 +301,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .bar:before, .bar:after 	{
     content:'';
-    height:2px;
+    height:3px;
     width:0;
     bottom:0;
     position:absolute;
-    background:white;
+    background: #ffffff;
     transition:0.2s ease all;
     -moz-transition:0.2s ease all;
     -webkit-transition:0.2s ease all;
@@ -261,7 +319,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* active state */
 input:focus ~ .bar:before, input:focus ~ .bar:after {
-    width:51.5%;
+    width:53%;
 }
 /* HIGHLIGHTER ================================== */
 .highlight {
@@ -296,7 +354,7 @@ input:focus ~ .highlight {
 }
 .button {
     display: flex;
-    margin: 10px;
+    margin: 10px 0;
     padding: 12px 12px;
 
     cursor: pointer;
@@ -321,8 +379,8 @@ input:focus ~ .highlight {
     background-color: #a1a1a1;
 }
 .button.-regular:hover {
-     color: #202129;
-     background-color: #d9d9d9;
+     color: #eeeeee;
+     background-color: #484848;
      opacity: 1;
  }
 
@@ -372,33 +430,170 @@ footer{
     padding: 15px 10px;
     font-size: 16px;
     font-weight: 500;
+    box-shadow: 2px 2px 5px #262626;
 }
 .welcome__btn {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 50px;
+    flex-direction: column;
+    margin: 40px;
 }
+
 .welcome__btn a{
     text-decoration: none;
-    width: 45%;
+    margin: 10px 0;
+    width: 70%;
 }
 .welcome .button:hover{
     width: 100%;
     margin: 0;
     background-color: #3a3a3a;
     color: white;
+    box-shadow: 2px 2px 5px #e4e4e4;
 }
 
-.btn-more{
-    padding: 23px !important;
+.documents{
+    background: url("assets/aboutBg1.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 300px;
+}
+.documents__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 70vw;
+    background:transparent;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #e4e4e4;
+    padding: 25px 50px;
+    margin: 0 auto;
+}
+.documents a {
+    text-decoration: none;
+    color: white;
 }
 
-@media only screen and (max-width: 800px) {
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    margin: 35px auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+.modal-content ul{
+    padding-left: 25px;
+}
+
+.modal-header h2,
+.modal-footer h3 {
+    margin: 0;
+}
+
+.modal-header {
+    background: rgb(255, 171, 0);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-body {
+    padding: 10px 20px;
+    background: #fff;
+    color: black;
+}
+
+.close {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.checkbox-wrapper {
+    display: inline-block;
+    cursor: pointer;
+    position: static;
+    pointer-events: auto;
+}
+.checkbox-wrapper a{
+    text-decoration: none;
+    color: #ffb173;
+}
+.checkbox-wrapper #modal-link{
+    color: #ffb173;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox-label {
+    position: relative;
+    padding-left: 30px;
+    user-select: none;
+}
+
+.checkbox-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.checkbox:checked + .checkbox-label .checkbox-custom {
+    background-color: #2196F3;
+}
+
+.checkbox:checked + .checkbox-label .checkbox-custom::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
     .welcome{
         flex-direction: column;
         padding: 0;
         text-align: center;
+    }
+    .welcome__container{
+        margin: 0 auto;
     }
     .welcome__content{
         text-align: center;
@@ -407,27 +602,18 @@ footer{
     }
     .welcome__logo-content{
         align-items: center;
-        flex-direction: column;
         width: 100%;
     }
-    .welcome__logo img{
-        margin-bottom: 100px;
-        max-width: 100vw;
-        width: 100%;
-        height: auto;
-    }
-    .welcome__janaozen img{
-        margin: 50px 0;
-        max-width: 100vw;
-        width: 100%;
-        height: auto;
-    }
+
     .welcome__btn{
         width: 80%;
         margin: 10px auto;
     }
+    .welcome__btn a{
+        width: 100%;
+    }
     .welcome__content h1{
-        font-size: 40px;
+        font-size: 36px;
     }
     .about__info{
         display: flex;
@@ -441,9 +627,6 @@ footer{
     .about__card h3{
         height: 50px;
     }
-    .registration__card{
-        max-width: 100%;
-    }
     .registration .container{
         display: flex;
         flex-direction: column;
@@ -454,9 +637,15 @@ footer{
         padding-top: 50px;
         order: 2;
     }
+    .modal-content{
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 500px) {
+    .welcome__content{
+        padding: 0;
+    }
     .burger{
         display: block;
     }
@@ -489,4 +678,5 @@ footer{
         justify-content: space-around;
     }
 }
+
 

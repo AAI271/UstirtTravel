@@ -13,32 +13,20 @@
         <img src="assets/burger.svg" alt="">
     </div>
     <div class="nav" id="nav">
-        <ul>
-            <li>
-                <a href="#welcome">Ustirt</a>
-            </li>
-            <li>
-                <a href="#about">Info</a>
-            </li>
-            <li>
-                <a href="#team">Team</a>
-            </li>
-            <li>
-                <a href="#registration">Send</a>
-            </li>
-        </ul>
     </div>
 </header>
 <section id="welcome" class="welcome">
-    <div>
-
-        <div class="welcome__content">
+    <div class="welcome__content">
+        <div>
             <h1>
-                Вело шеру 2023
+                ВЕЛО ШЕРУ-2023
             </h1>
             <span>by UstirtTravel</span>
             <p>
-                Жаңаөзен қаласының 55 жылдығына орай, қаламызда вело шеру өтеді. Вело шеруге қатысушыларға жас шектеу жоқ
+                Жаңаөзен қаламыздың 55 жылдығы мерейтойына орай
+                қаламызда Велошеру өтеді. Шараның негізгі мақсаты қала
+                көлемінде дене шынықтыру мен бұқаралық спортты дамыту және
+                іргелес жатқан елді мекендер арасында достық қарым қатынасты өрбіту
             </p>
         </div>
         <div class="welcome__btn">
@@ -46,16 +34,28 @@
                 <button class="button -regular center">"Велошеру-2023" тіркелу</button>
             </a>
             <a href="#about">
-                <button class="button -regular center btn-more">Толық ақпарат</button>
+                <button class="button -regular center">Толық ақпарат</button>
             </a>
         </div>
     </div>
-    <div class="welcome__logo-content">
-        <div class="welcome__janaozen" >
-            <img src="assets/janaozen.png" alt="">
+    <div class="welcome__container">
+        <div class="welcome__logo-content">
+            <div class="welcome__janaozen" >
+                <img src="assets/janaozen.png" alt="">
+            </div>
+            <div  class="welcome__logo" >
+                <img src="assets/logo.png" alt="">
+            </div>
         </div>
-        <div  class="welcome__logo" >
-            <img src="assets/logo.png" alt="">
+        <div class="welcome-timer">
+            <div id="countdown">
+                <ul>
+                    <li><span id="days"></span>Күн</li>
+                    <li><span id="hours"></span>Сағат</li>
+                    <li><span id="minutes"></span>Минут</li>
+                    <li><span id="seconds"></span>Секунд</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
@@ -67,26 +67,24 @@
 <!--    </div>-->
     <div class="about__info">
         <div class="about__card">
-            <h3>Велошеру жоспары</h3>
+            <h3>Жоспар:</h3>
             <ul>
-                <li>8:00-8:45 Сахналық ойын. Бүлдіршіндер алаңы. Тіркелу</li>
-                <li>8:45-9:00 Шеруге дайындық.</li>
-                <li>9:00-9:45 Шеру.</li>
-                <li>9:45-10:30 Марапаттау</li>
+                <li>8:00-  9:00 Сахна</li>
+                <li>9:00- 10:00 Шеру</li>
+                <li>10:00-11:00 Марапаттау</li>
             </ul>
         </div>
         <div class="about__card">
-            <h3>Велошеруге кім қатыса алады?</h3>
+            <h3>Талаптар:</h3>
             <ul>
-                <li>13-55 жас аралығында болуы</li>
-                <li>Велосипедінің техникалық жағдайы стандартқа сай болуы</li>
+                <li>13-55 жас аралығы</li>
+                <li>Жеке велосипеді болуы</li>
                 <li>Денсаулығында ақау болмауы</li>
-                <li>Форма: үстіне ақ түстес киім киуі</li>
-                <li>Шеру барысындағы ережелерге бағыну</li>
+                <li>Үстіне түсті киім болуы</li>
             </ul>
         </div>
         <div class="about__card">
-            <h3>Шеру туралы</h3>
+            <h3>Қосымша ақпарат</h3>
             <ul>
                 <li>Велошеру ұзақтығы – 3,5 шақырым</li>
                 <li>Әрбір қатысушы медальмен марапатталады.</li>
@@ -118,17 +116,124 @@
                     <span class="bar"></span>
                     <label>Жасыңыз</label>
                 </div>
-                <button type="submit" class='button -regular center' id="submit-btn">"Велошеру-2023" тіркелу</button>
+                <div class="agreement">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox" required>
+                        <span class="checkbox-label">
+                            <span class="checkbox-custom"></span>
+                            <a href="#documents">Құжаттармен</a>
+                            ,
+                            <span id="modal-link">ережелермен</span>
+                            таныстым
+                        </span>
+                    </label>
+                </div>
+
+                <div id="my-modal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Ережелер</h2>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Қатысушылар маршрут бойынша келесі қауіпсіздік талаптарын сақтауы керек:</h4>
+                            <ul>
+                                <li>
+                                    Әрбір қатысушы велошеру бойы және одан шыққаннан кейін ЖҚЕ (жол қауіпсіздік ережесі) білуге және сақтауға міндеттенеді.
+                                </li>
+                                <li>
+                                    Әрбір қатысушы жаппай үйінділерді (завал) болдырмау үшін қауіпсіз қашықтықты (басып озу және басқа маневрлер) сақтауға міндеттенеді.
+                                </li>
+                                <li>
+                                    Велосипед бұзылған жағдайда, жолдан қауіпсіз қашықтыққа шығу керек және мүмкіндігінше сынуды өзіңіз жоюыңыз керек. Топтап жүруге рұқсат етіледі.
+                                </li>
+                                <li>
+                                    Қатысушыларға велошеру барысында алкоголь, есірткі және темекі өнімдерін тұтынуға тыйым салынады.
+                                </li>
+                                <li>
+                                    Әрбір қатысушы кенеттен қозғалыссыз, біркелкі және түзу қозғалуға міндетті.
+                                </li>
+                                <li>
+                                    Құлау және жарақат алған жағдайда сүйемелдеу машинасына алғашқы медициналық көмекке жүгіну керек.
+                                </li>
+                            </ul>
+                            <h4>Велосипедтер жол ережесінің техникалық талаптарына сай болуы керек:</h4>
+                            <ul>
+                                <li>
+                                    Тежегіштердің жарамдылығы;
+                                </li>
+                                <li>
+                                    Дөңгелектің қалыпты қысымы;
+                                </li>
+                                <li>
+                                    Беріліс қорабының жарамдылығы, берілістердің анық ауысуы, сықырлаудың болмауы;
+                                </li>
+                            </ul>
+                            <h4>Тыйым салынады!</h4>
+                            <ul>
+                                <li>
+                                    Велосипед шеруге тежегіштері ақаулы, техникалық ақаулы велосипедпен қатысуға
+                                </li>
+                                <li>
+                                    Шеру кезінде дыбыс тыңдайтын құрылғыларды (наушники) пайдалануға
+                                </li>
+                                <li>
+                                    Қозғалыс кезінде телефонды пайдалануға
+                                </li>
+                                <li>
+                                    Шеруді өту кезінде және велосипед жөнделген жағдайда бөгде көмекті пайдалануға
+                                </li>
+                                <li>
+                                    Шеруді өту  кезінде велосипедті ауыстыруға
+                                </li>
+                                <li>
+                                    Қашықтықтан өтуді жеңілдететін кез келген тәсілдер мен құралдарды (мотор-доңғалақ, электронды велосипед және т. б.) пайдалануға
+                                </li>
+                                <li>
+                                    Бекітілген шеру бағытын өзгертуге
+                                </li>
+                                <li>
+                                    Бір-бірін балғаттауға
+                                </li>
+                                <li>
+                                    Шеру кезінде маршрутының аймағында кез келген жөндеуге
+                                </li>
+                                <li>
+                                    Велосипед зақымданған жағдайда қатысушының баған жолында тұруға, веложарыс қозғалысына қарсы қозғалуға құқығы жоқ, бірақ баған қозғалысы барысының оң жағындағы тротуарға шығуға міндетті.
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class='button -regular center' id="submit-btn">ТІРКЕЛУ</button>
             </form>
         </div>
-        <div class="registration__card">
-            <h2>Біз туралы</h2>
-            <p>
-                “Ustirt Travel” клубы Жаңөзен қаласында 2019 жылы өз жұмысын бастады.
-                Қазіргі күнде Маңғыстау облысында велоспортты
-                дамытумен шектелмей, эко туризмді де дамытуды көздеп отыр.
-                Клубтың негізгі мақсаты салауатты өмір салтын насихаттап халқымыздың жан жақты дамуына ықпал жасау.
-            </p>
+        <div class="registration__img">
+            <img src="assets/AboutUs.png" alt="">
+        </div>
+    </div>
+</section>
+<section id="documents" class="documents">
+    <div class="documents__container">
+        <div class="documents__item">
+            <a href="assets/жогары.docx" download="18 ге толган">
+            <img src="assets/document.png" width="80" height="80" alt="document">
+            <p>1</p>
+            </a>
+        </div>
+        <div class="documents__item">
+            <a href="assets/толмаган.docx" download="18 ге толмаган">
+            <img src="assets/document.png" width="80" height="80" alt="document">
+            <p>2</p>
+            </a>
+        </div>
+        <div class="documents__item">
+            <a href="assets/кауипсиздик.docx" download="Кауипсиздик талаптары">
+            <img src="assets/document.png" width="80" height="80" alt="document">
+            <p>3</p>
+            </a>
         </div>
     </div>
 </section>
