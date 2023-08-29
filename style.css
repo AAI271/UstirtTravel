@@ -455,6 +455,7 @@ footer{
     background: url("assets/aboutBg1.png") no-repeat center center fixed;
     background-size: cover;
     min-height: 300px;
+    padding-top: 50px;
 }
 .documents__container{
     display: flex;
@@ -464,9 +465,9 @@ footer{
     width: 70vw;
     background:transparent;
     border-radius: 15px;
-    box-shadow: 2px 2px 5px #e4e4e4;
+    box-shadow: 2px 2px 10px #545454;
     padding: 25px 50px;
-    margin: 0 auto;
+    margin:0 auto;
 }
 .documents a {
     text-decoration: none;
@@ -492,6 +493,8 @@ footer{
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration: 1s;
+    border-radius:5px 5px 15px 15px;
+    overflow: hidden;
 }
 .modal-content ul{
     padding-left: 25px;
